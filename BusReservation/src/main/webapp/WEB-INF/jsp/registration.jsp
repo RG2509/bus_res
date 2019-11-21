@@ -7,10 +7,21 @@
 <title>Insert title here</title>
 </head>
 <body>
-<form method="POST" action="login.do" modelAttribute="user" >
+<form id="regForm" modelAttribute="user" action="register.do" method="post">
 <table>
+
 <tr>
-<td>Email Id</td>
+<td>Full Name</td>
+<td><input name="Fullname" type="text"/></td>
+</tr>
+
+<tr>
+<td>mobile</td>
+<td><input name="Mobile" type="text"/></td>
+</tr>
+
+<tr>
+<td>Email</td>
 <td><input name="Email" type="text"/></td>
 </tr>
 
@@ -26,5 +37,6 @@
 </tr>
 </table>
 </form>
+
 </body>
 </html>

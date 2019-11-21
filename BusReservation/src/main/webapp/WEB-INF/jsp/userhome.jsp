@@ -6,25 +6,10 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
 </head>
+<style>
+body{background-color: lime}
+</style>
 <body>
-<form method="POST" action="login.do" modelAttribute="user" >
-<table>
-<tr>
-<td>Email Id</td>
-<td><input name="Email" type="text"/></td>
-</tr>
-
-<tr>
-<td>Password</td>
-<td><input name="Password" type="password"/></td>
-</tr>
-
-<tr>
-<td colspan="2">
-<input type="submit" value="submit"/>
-</td>
-</tr>
-</table>
-</form>
+Successfully added!
 </body>
 </html>
