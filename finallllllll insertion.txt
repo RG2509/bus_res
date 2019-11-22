@@ -1,0 +1,190 @@
+create table login (
+login_id int not null primary key, 
+username varchar(100) not null,
+password varchar(100) not null
+);
+ drop table login
+
+-================================================================
+
+create table Users(
+
+fullname varchar(100) not null,
+mobile varchar(100),
+Email varchar(100) not null primary key,
+password varchar (100) not null
+)
+drop table registration
+
+create table passenger (
+p_id int not null primary key, 
+p_name varchar(100)not null,
+p_mobileno varchar(15)not null,
+gender varchar(10)not null);
+ 
+select *from passengers
+desc registration 
+
+
+drop table passengers
+create table bus
+(
+bus_id varchar(100)not null primary key,
+bus_name varchar(100),
+bus_no varchar(100) not null,
+bus_type varchar(100),
+no_of_seats int not null,
+fare int not null,
+departure_time varchar(100),
+arrival_time varchar(100),
+route_id int references route(route_id) not null
+)
+
+drop table bus 
+
+create table route(
+route_id int not null primary key,
+source varchar(100) not null,
+destination varchar(100) not null,
+distance varchar(100) not null
+)
+
+
+drop table route
+
+
+
+
+
+
+create table reservation(
+ticket_id varchar(100) not null primary key,
+seat_no varchar(50) not null,
+time_of_journey varchar(50) not null ,
+date_of_journey varchar(50) not null,
+bus_id varchar(100) references bus(bus_id) not null,
+p_id int references passenger(p_id)
+)
+
+drop table reservation
+
+
+create table admin(
+
+email_id varchar(100) not null,
+password varchar(100)not null
+)
+
+drop table admin
+
+
+
+create table Stoppage1(
+stoppage_id varchar(100) NOT NULL,
+route_id int references route(route_id)  NOT NULL,
+location varchar(100) NOT NULL
+);
+ 
+drop table Stoppage1
+
+
+create table Stoppage2(
+stoppage_id varchar(100),
+route_id int references route(route_id)  NOT NULL,
+location varchar(100)
+);
+
+drop table Stoppage2
+
+======================================================================================
+
+
+insert into registration values('1','Rahul','9833635454','rahul@gmail.com','rahul')
+insert into registration values('2','Kiran','9833635455','kiran@gmail.com','kiran')
+insert into registration values('3','Kajal','9833635456','kajal@gmail.com','kajal')
+insert into registration values('4','Shailja','9833555454','shailja@gmail.com','shailja')
+
+select * from registration
+
+select * from bus
+
+desc registration
+
+desc bus
+insert into bus values('01','MH-04-EF-9028','25')
+insert into bus values('02','MH-02-HM-9011','25')
+insert into bus values('03','MH-03-ZA-9434','25')
+insert into bus values('04','MH-04-LF-9528','25')
+insert into bus values('06','MH-05-NF-9588','25')
+
+desc Stoppage1
+
+select * from stoppage1
+
+insert into Stoppage1 values('1','1','Dadar')
+insert into Stoppage1 values('2','1','Thane')
+insert into Stoppage1 values('3','2','Vashi')
+insert into Stoppage1 values('4','2','Panvel')
+
+desc Stoppage2
+
+
+insert into Stoppage2 values('1','1','Chinchwad')
+insert into Stoppage2 values('2','1','Wakad')
+insert into Stoppage2 values('3','2','Thakar Bazar')
+insert into Stoppage2 values('4','2','Bitko')
+
+select * from stoppage2
+
+
+
+desc route
+select *from route
+
+ values('1','01','Airoli','Pune','147','3:00 hrs','350','7:00','10:00')
+insert into route values('2','02','Mahape','Nashik','350','7:00 hrs','800','9:00','17:00')
+
+
+desc admin
+
+insert into admin values('Virat Kohli','virat@gmail.com','virat@123')
+
+select * from admin
+
+
+
+desc reservation
+
+insert into reservation values('1000','1','7:00','28Nov2019','01','1')
+insert into reservation values('1001','2','7:00','28Nov2019','01','2') 
+insert into reservation values('1002','18','10:00','30Nov2019','02','3') 
+insert into reservation values('1003','19','10:00','30Nov2019','02','4')  
+
+select * from reservation
+
+
+desc passenger
+
+insert into passenger values('1','Deepika Padukone','9054320000','Female')
+insert into passenger values('2','Ranveer Singh','9054378400','male')
+insert into passenger values('3','Nick Jonas','9054320780','male')
+insert into passenger values('4','Priyanka Chopra','9074320000','Female')
+
+
+select * from passenger
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
