@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Index</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the header */
+header {
+  background-color: #dbc2f1;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+  color: white;
+}
+
+/* Container for flexboxes */
+
+
+/* Style the navigation menu */
+nav {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  background: #ccc;
+  padding: 20px;
+}
+
+/* Style the list inside the menu */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+/* Style the content */
+
+
+/* Style the footer */
+footer {
+  background-color: #777;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+/* Responsive layout - makes the menu and the content (inside the section) sit on top of each other instead of next to each other */
+@media (max-width: 600px) {
+  section {
+    -webkit-flex-direction: column;
+    flex-direction: column;
+  }
+}
+</style>
+</head>
+<body>
+
+
+<header>
+  <h2><i>Buswala.com</i></h2>
+</header>
+
+<input type="text" list="srccities" name="u" id="n" placeholder="Source" required="required" class="input2"/>
+<datalist id="srccities">
+  <option value="Mumbai"></option>
+  <option value="Pune"></option>
+</datalist>
+
+
+<input type="text" list="descities" name="p" placeholder="Destination" required="required" class="input2"/>
+<datalist id="descities">
+    <option value="Mumbai"></option>
+    <option value="Pune"></option>
+  </datalist>
+<input type="date" class="input2" placeholder="Date">
+
+<footer>
+  <p>Footer</p>
+</footer>
+
+</body>
+</html>
